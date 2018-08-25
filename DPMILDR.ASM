@@ -1924,6 +1924,24 @@ ife ?32BIT
 	inc bx
 	cmp al,es:[bx]
 	jnz @B
+	push bx
+@@:
+	inc bx
+	cmp al,es:[bx]
+	jnz @B
+	inc bx
+	mov di,bx
+	xor cx,cx
+	push ds
+	mov ds,cs:[wCurPSP]
+	mov si,80h
+	lodsb
+	mov cl,al
+	rep movsb
+	pop ds
+	mov al,0
+	stosb
+	pop bx
 	inc bx
 	mov ax,es
 	push 0
