@@ -51,8 +51,8 @@ DOSEXECPGM:
         mov     [BP+0],AX      ;environment
 
         les     DI,[BP+2Ah]
-        mov		ax,es
-        and		ax,ax
+        mov		cx,es
+        and		cx,cx
         jnz		cmdlinegiven
         xor		di,di
         jmp		cmdline2
