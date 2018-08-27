@@ -12,7 +12,7 @@ With everything in place and with the fixed argument handling, a successful buil
 
 Tested under real DOS 6.22, also WfW 3.11 as well as Windows XP. All of them running in VirtualBox.
 
-- The binaries resulting from the following steps are contained in this repo under bin/, so for a quick Opus build, you can use them directly and copy them into the Opus tree.
+- The patched HX files are pre-built under bin/ in this repository, so you might skip the next two steps.
 - Unzip HXRT217.zip, HXSRC217.zip, HXDEV217.zip, HXD16217.zip.
 - Patch SRC/DOSXXX/DOSEXEC.ASM and SRC/DPMILDR/DPMILDR.ASM according to this repo. Build the DOSXXX and DPMILDR directories (at least DOSCALLS.DLL and DPMILD16.EXE).
 - Take CSL.EXE and CSL2.EXE from Opus/tools/os2 and apply DPMIST16.BIN using renewstub.py.
