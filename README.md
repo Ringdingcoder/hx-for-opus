@@ -19,3 +19,5 @@ Tested under real DOS 6.22, also WfW 3.11 as well as Windows XP. All of them run
 - For operation under Windows (NTVDM): Patch 0xffff to 0x0000 at offsets 0x1ec9f (CSL.EXE) / 0x133c7 (CSL2.EXE). These are invalid seeks to file position -1.
 - Copy DOSCALLS.DLL, DPMILD16.EXE, CSL.EXE, CSL2.EXE into Opus/tools/dos.
 - Run tools\makeopus normally.
+
+Initially, this repo hosted the resulting CSL* binaries, but the Winword museum license does not permit this, so I had to remove them.
