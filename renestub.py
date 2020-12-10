@@ -84,8 +84,8 @@ def main():
     tmp = orig + ".tmp"
     with open(tmp, "wb") as tmpf:
         tmpf.write(stub)
-        tmpf.write("\0" * (((newsects << shift) + (oldstubsize % divisor)) - len(stub)))
-        tmpf.write(str(bent))
+        tmpf.write(b"\0" * (((newsects << shift) + (oldstubsize % divisor)) - len(stub)))
+        tmpf.write(bytes(bent))
     os.rename(tmp, orig)
 
 if __name__ == "__main__":
