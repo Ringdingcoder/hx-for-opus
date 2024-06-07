@@ -21,4 +21,6 @@ With everything in place and with the fixed argument handling, a successful buil
 
 Initially, this repo hosted the resulting CSL* binaries, but the Winword museum license does not permit this, so I had to remove them.
 
-Also, at the time I originally did this project, I was not aware of the Microsoft Family API and thus missed the fact that the DOS version of MASM 5 is a bound executable, and thus the same file is already both the DOS as well as the OS/2 version.
+Also, at the time I originally did this project, I was not aware of the Microsoft Family API and thus missed the fact that the DOS version of MASM 5 is a bound executable, and thus the same file is already both the DOS and the OS/2 version.
+
+Additionally, I became aware that it does not work on any NT before Windows XP; ironically, this happens to be the case because these versions support OS/2 executables natively, and im2obj.exe does not seem to work in this mode. I could determine that it issues a large DosRead operation into a not-so-large buffer, and the Windows OS/2 subsystem probes the last byte of the buffer to make sure that it is writable, thus crashing it. The data read from file is apparently never large enough to overflow the buffer; it is specifially the probe that crashes it.
